@@ -487,7 +487,7 @@
 
   .slider .owl-dots {
     position: absolute;
-    top: 50%;
+    top: 45%;
     right: 2em;
     justify-content: center;
   }
@@ -514,35 +514,35 @@
     border-color: transparent;
   }
 
+
   .slider .caption {
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: left;
-    background-color: rgba(20,20,20,0.2);
     height: 100%;
     color: #fff;
     padding: 4em 0 0 2em;
+    top: 50%;
   }
 
   .slider .item {
     background-position: inherit;
     background-repeat: no-repeat;
     background-attachment: local;
-    background-size: cover;
-    height: 650px;
+    background-size: cover; 
   }
 
   .slider .item-first {
-    background-image: url(../images/slider-image1.jpg);
+    background-image: url(../images/slider1.jpg);
   }
 
   .slider .item-second {
-    background-image: url(../images/slider-image2.jpg);
+    background-image: url(../images/food3.jpg);
   }
 
   .slider .item-third {
-    background-image: url(../images/slider-image3.jpg);
+    background-image: url(../images/slider3.jpg);
   }
 .slider .item-first .section-btn:hover {
   color: #000;
@@ -582,7 +582,7 @@
   }
 
   .about-info .section-title {
-    padding-bottom: 20px;
+    padding-bottom: 0px;
   }
 
   .about-image {
@@ -597,7 +597,7 @@
 }
 
 .tm-feature-icon {
-  color: #9f9c9c;
+  color: #931320;
   margin-bottom: 65px;
 }
 
@@ -642,12 +642,18 @@ reservation
 #reservation {
   margin-bottom:25px;
   padding: 120px 20px;
-  background-image: url(../images/slider-image1.jpg);
+  background-image: url(../images/food2.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+#reservation .delivery{
+  margin-bottom: 60px;
+}
+
+
+#reservation .delivery,
 #reservation .phone,
 #reservation .message {
   background-color: #fff;
@@ -658,7 +664,7 @@ reservation
 
 #reservation .phone i,
 #reservation .message i,
-#reservation .phone img {
+#reservation .delivery img {
   width: 70px;
   height: 70px;
   display: inline-block;
@@ -680,6 +686,7 @@ reservation
   width: 100%;
 } */
 
+#reservation .delivery h4,
 #reservation .phone h4,
 #reservation .message h4 {
   font-size: 20px;
@@ -687,7 +694,7 @@ reservation
   margin-top: 15px;
   margin-bottom: 10px;
 }
-
+#reservation .delivery span a,
 #reservation .phone span a,
 #reservation .message span a {
   font-size: 14px;
@@ -695,6 +702,7 @@ reservation
   transition: all .3s;
 }
 
+#reservation .delivery span a:hover,
 #reservation .phone span a:hover,
 #reservation .message span a:hover {
   color: #fb5849;
@@ -788,13 +796,18 @@ reservation
   padding-bottom: 0;
 }
 
+.specialities-info .section-btn:hover{
+  background-color:#000000;
+  color: #fff;
+}
 .specialities-info {
   padding: 0 6em 5em 0;
 }
 
 .specialities-info .section-title {
-  padding-bottom: 20px;
+  padding-bottom: 0px;
 }
+
 
 .specialities-image {
   position: absolute;
@@ -805,10 +818,24 @@ reservation
   -----------------------------------------*/
 
   #testimonial {
-    background: url('../images/testimonial-bg.jpg') center center no-repeat;
+    background: url('../images/slider4.jpg') center center no-repeat;
     background-size: cover;
   }
 
+  .testimonial-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  }
+
+  #testimonial .testimonial-img{
+    width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+  background-position: top center;
+  }
   #testimonial .owl-dots {
     position: relative;
     top: 0;
@@ -853,6 +880,74 @@ reservation
   .tst-author span {
     margin-left: 5px;
   }
+
+  /*---------------------------------------
+      Gallery             
+  -----------------------------------------*/
+  .restro-food .thumbnail {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    border-radius: 7px;
+    height:300px;
+    width:auto;
+    margin-bottom: 20px;
+  }
+  .specialities .owl-theme .owl-dots .owl-dot,
+  .specialities .owl-theme .owl-dots .owl-dot span {
+    display: inline-block;
+  }
+
+  .specialities .owl-theme .owl-dots .owl-dot span {
+    margin: 20px 5px;
+    border: 2px solid #d9d9d9;
+    background: transparent;
+    display: block;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    transition: opacity 200ms ease;
+    border-radius: 30px;
+  }
+  
+
+  .specialities .owl-theme .owl-dots .owl-dot.active span, .specialities .owl-theme .owl-dots .owl-dot:hover span {
+    background-color: #000;
+    border-color: transparent;
+  }
+  
+  
+  .restro-food .thumbnail img {
+    margin-bottom: 0;
+    height: 300px;
+    width: 100%;
+   background-size: cover !important;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    overflow: hidden;
+  }
+
+  @media (max-width: 991.98px) {
+    .restro-food .thumbnail {
+      height:150px;
+      width:auto;
+    }
+    .restro-food .thumbnail img {
+      height: 150px;
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+  
+  .restro-food .thumbnail:hover img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
 
 
   /*---------------------------------------
@@ -951,10 +1046,9 @@ reservation
     display: block;
   }
   
-  /* .restro-menu-nav .tab-wrap {
-    border: 1px solid tan;
-    border-radius: 25px;
-  } */
+  .restro-menu-nav .tab-wrap {
+    margin-bottom:20px;
+  }
   
   .menu-wrap {
     margin-bottom: 3em;
@@ -965,13 +1059,17 @@ reservation
     font-weight: 700;
     margin-top: 10px;
     color: #000000;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color:tan ;
     text-transform: uppercase;
   }
   
   .heading-menu p {
     font-size: 18px;
+    font-style: italic;
     text-transform: uppercase;
+    color: #000000;
   }
   
   .heading-menu {
@@ -985,9 +1083,13 @@ reservation
   }
   
   .sub-heading-menu p {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 18px;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #000000;
+
   }
+
 
   .restro-menu {
     width: 100%;
@@ -1020,7 +1122,7 @@ reservation
   
   .restro-menu .text .item-price span {
     font-size: 20px;
-    color: rgba(0, 0, 0, 0.2);
+    color: #000000;
     font-weight: 600;
     line-height: 1.3;
     -moz-transition: all 0.3s ease;
@@ -1032,7 +1134,7 @@ reservation
   
   .restro-menu .text p {
     margin-bottom: 0;
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.8);
   }
   
   .restro-menu .restro-menu-img {
@@ -1064,9 +1166,7 @@ reservation
     border-radius: 15px;
   } */
   
-  .restro-menu:hover .text .item-price span {
-    color: #000000;
-  }
+  
 
   /* Menu Section End */
 
@@ -1251,6 +1351,9 @@ reservation
   }
 
   @media (max-width: 992px) {
+    #reservation .delivery{
+      margin-bottom: 60px;
+    }
     #reservation .phone {
       margin-bottom: 60px;
     }

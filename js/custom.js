@@ -7,6 +7,16 @@
       $('.preloader').fadeOut(1000); // set duration in brackets    
     });
 
+    var fullHeight = function () {
+
+      $('.restro-height').css('height', $(window).height());
+      $(window).resize(function () {
+        $('.restro-height').css('height', $(window).height());
+      });
+  
+    };
+    fullHeight();
+
 // scroll
 var scrollWindow = function () {
   $(window).scroll(function () {
@@ -61,6 +71,7 @@ scrollWindow();
       loop:true,
       autoplayHoverPause: false,
       autoplay: true,
+      autoplayTimeout:5000,
       responsive:{
         0: {
 					items: 1
@@ -74,6 +85,30 @@ scrollWindow();
       }
     })
 
+    $('.restro-carousel').owlCarousel({
+			loop: true,
+			items: 1,
+			margin: 30,
+			stagePadding: 0,
+      loop:true,
+      autoplayHoverPause: false,
+      autoplay: true,
+			center: true,
+			nav: false,
+      dots:true,
+			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+			responsive: {
+				0: {
+					items: 1
+				},
+				600: {
+					items: 1
+				},
+				1000: {
+					items: 1
+				}
+			}
+		});
 
     // PARALLAX EFFECT
     $.stellar({
